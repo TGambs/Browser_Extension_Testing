@@ -1045,10 +1045,7 @@ Test512 = function () {
   // sk, ct, ss
 
   let fs = require("fs");
-  let textByLine = fs
-    .readFileSync("./node_modules/crystals-kyber/PQCkemKAT_1632.rsp")
-    .toString()
-    .split("\n");
+  let textByLine = fs.readFileSync("PQCkem.rsp").toString().split("\n");
 
   // console.log(textByLine.length); // seems to be an array of strings (lines)
   let sk100 = [];
