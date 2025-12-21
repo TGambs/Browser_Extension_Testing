@@ -1,0 +1,9 @@
+
+
+npm install kyber-crystals
+
+mkdir kyber-test-ext
+cd kyber-test-ext
+npm init -y
+npm install kyber-crystals
+npm install -D vite
