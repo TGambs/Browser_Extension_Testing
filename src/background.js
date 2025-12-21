@@ -1,3 +1,3 @@
-import kyber from "./kyber.js";
+import kyber from "../src/kyber.js";
 
 console.log("Kyber loaded:", kyber);
