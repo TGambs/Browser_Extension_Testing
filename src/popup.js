@@ -1,4 +1,7 @@
 console.log("This is a popup!");
+import kyber from "../src/kyber.js";
+
+console.log("Kyber loaded:", kyber);
 
 /*
 using the npm installed version of KYBER
