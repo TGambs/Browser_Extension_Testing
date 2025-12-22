@@ -2,8 +2,8 @@
 // shouldnt do kyber here and processing should be minimal
 // use "chrome.runtime.sendMessage(...)" to send data/trigger background.js
 
-console.log("\n--- popup.js loading ---zn");
+console.log("\n--- popup.js loading ---\n");
 
 //chrome.runtime.sendMessage();
 
-console.log("zn--- popup.js completed ---\n");
+console.log("\n--- popup.js completed ---\n");
