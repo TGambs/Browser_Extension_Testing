@@ -1,4 +1,5 @@
-console.log("This is a popup!");
+console.log("\n--- popup.js loading ---");
+
 import kyber from "../src/kyber.js";
 
 console.log("Kyber loaded:", kyber);
@@ -13,3 +14,5 @@ print it to console
 console.log(pk);
 
 */
+
+console.log("--- popup.js completed ---\n");
