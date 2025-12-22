@@ -1,18 +1,9 @@
-console.log("\n--- popup.js loading ---");
+// Popup.js is used for front-end stuff
+// shouldnt do kyber here and processing should be minimal
+// use "chrome.runtime.sendMessage(...)" to send data/trigger background.js
 
-import kyber from "../src/kyber.js";
+console.log("\n--- popup.js loading ---zn");
 
-console.log("Kyber loaded from popup:", kyber);
+//chrome.runtime.sendMessage();
 
-/*
-using the npm installed version of KYBER
-import { kyber } from "crystals-kyber";
-
-generate a public key
-let pk = kyber.KeyGen512();
-print it to console
-console.log(pk);
-
-*/
-
-console.log("--- popup.js completed ---\n");
+console.log("zn--- popup.js completed ---\n");

@@ -8,6 +8,10 @@ npm init -y
 npm install kyber-crystals
 npm install -D vite
 
+npm run build       <--- used to compile the project once
+
+npm run watch       <--- used for live rebuilding of the project as it is updated (basically a live "npm run build" for whenever it is saved)
+
 
 -------------- This points to the kyber library that has been 'bundled' into one file (kyber.js) --------------
 // Import from the kyber-crystals package entry point
