@@ -1,1 +1,1 @@
-console.log("\n--- popup.js loading ---zn"),console.log("zn--- popup.js completed ---\n");
+console.log("\n--- popup.js loading ---\n"),console.log("\n--- popup.js completed ---\n");
