@@ -4,6 +4,9 @@
 
 console.log("\n--- Background.js loading ---");
 
+import { MlKem768 } from "crystals-kyber-js";
+const recipient = new MlKem768();
+console.log(recipient);
 /*
 import kyber from "../src/kyber.js";
 

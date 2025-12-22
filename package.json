@@ -24,6 +24,6 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "kyber-crystals": "^1.0.7"
+    "crystals-kyber-js": "^2.5.0"
   }
 }
