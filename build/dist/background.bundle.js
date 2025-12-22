@@ -1,1 +1,1 @@
-console.log("\n--- Background.js loading ---"),console.log("--- Background.js completed ---\n");
+console.log("\n--- Background.js loading ---"),chrome.runtime.onMessage.addListener((e,o,s)=>(console.log("Message received in background:",e),"test"===e.action&&s({success:!0,message:"Background is working!"}),!0)),console.log("--- Background.js completed ---\n");
