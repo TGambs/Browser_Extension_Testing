@@ -1,1 +1,1 @@
-console.log("\n--- popup.js loading ---\n"),console.log("\n--- popup.js completed ---\n");
+console.log("\n--- popup.js loading ---\n"),chrome.runtime.sendMessage({action:"test"},o=>{console.log("Response from background:",o)}),console.log("\n--- popup.js completed ---\n");
