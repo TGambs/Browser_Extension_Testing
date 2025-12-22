@@ -3,6 +3,8 @@
 // recieve data using "chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {});"
 
 console.log("\n--- Background.js loading ---");
+
+/*
 import kyber from "../src/kyber.js";
 
 console.log("Kyber loaded from background:", kyber);
@@ -24,5 +26,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
   return true; // Keep channel open for async
 });
+*/
 
 console.log("--- Background.js completed ---\n");
