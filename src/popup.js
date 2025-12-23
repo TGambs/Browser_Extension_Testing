@@ -17,17 +17,15 @@ async function getNewKeyPair() {
     if (response.success) {
       const output = `
         <strong>Key Pair Generated!</strong><br><br>
-        Raw PK: ${response.rawPK}<br>
-        Raw SK: ${response.rawSK}<br>
         Public Key Length: ${response.publicKeyLength} bytes<br>
         Secret Key Length: ${response.secretKeyLength} bytes<br><br>
         <small>Public Key (base64): ${response.publicKey.substring(
           0,
-          50
+          500
         )}...</small><br>
         <small>Secret Key (base64): ${response.secretKey.substring(
           0,
-          50
+          500
         )}...</small>
       `;
       document.getElementById("keyGenOutput").innerHTML = output;

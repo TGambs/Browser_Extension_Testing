@@ -39,8 +39,6 @@ async function genKeyPair() {
 
     return {
       success: true,
-      rawPK: publicKey,
-      rawSK: secretKey,
       publicKey: pkBase64,
       secretKey: skBase64,
       publicKeyLength: publicKey.length,
