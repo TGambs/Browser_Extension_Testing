@@ -61,3 +61,6 @@ module.exports = {
   }
 };
 ----------------------------------------------------------------------------------------------------------------
+
+
+for AES en/decryption I can use the in-built crypto library

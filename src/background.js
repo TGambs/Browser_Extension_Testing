@@ -1,6 +1,7 @@
 // This is used for most processing
 // kyber is done here
 // recieve data using "chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {});"
+// use crypto.subtle for AES computations
 
 console.log("\n--- Background.js loading ---");
 
