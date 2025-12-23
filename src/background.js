@@ -6,6 +6,7 @@
 console.log("\n--- Background.js loading ---");
 
 import { MlKem768 } from "crystals-kyber-js";
+const recip = new MlKem768();
 
 //const recipient = new MlKem768();
 //console.log(recipient);
@@ -25,9 +26,9 @@ import { MlKem768 } from "crystals-kyber-js";
 });
 */
 
-async function genKeyPair() {
+async function genKeyPair(recip) {
   let kPair = ["", ""];
-  kPair = await recipient.generateKeyPair();
+  kPair = await recip.generateKeyPair();
 
   return kPair;
 }
