@@ -6,10 +6,12 @@
 console.log("\n--- Background.js loading ---");
 
 import { MlKem768 } from "crystals-kyber-js";
-const recipient = new MlKem768();
-console.log(recipient);
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+//const recipient = new MlKem768();
+//console.log(recipient);
+
+// Test function
+/*chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   console.log("Message received in background:", request);
 
   if (request.action === "test") {
@@ -19,6 +21,26 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     });
   }
 
+  return true; // Keep channel open for async
+});
+*/
+
+async function genKeyPair() {
+  let kPair = ["", ""];
+  kPair = await recipient.generateKeyPair();
+
+  return kPair;
+}
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  console.log(request, " received in background");
+
+  if (request.action === "genKeys") {
+    sendResponse({
+      success: true,
+      data: genKeyPair(),
+    });
+  }
   return true; // Keep channel open for async
 });
 

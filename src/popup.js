@@ -4,8 +4,12 @@
 
 console.log("\n--- popup.js loading ---\n");
 
-chrome.runtime.sendMessage({ action: "test" }, (response) => {
-  console.log("Response from background:", response);
-});
+function getNewKeyPair() {
+  chrome.runtime.sendMessage({ action: "genKeys" }, (response) => {
+    console.log(response);
+  });
+
+  document.getElementById("keyGenOutput").innerHTML = response;
+}
 
 console.log("\n--- popup.js completed ---\n");
