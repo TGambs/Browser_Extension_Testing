@@ -7,7 +7,7 @@ import { MlKem768 } from "crystals-kyber-js";
 console.log("\n--- Background.js loading ---");
 
 //create instance
-const recip = new MlKem768();
+const KEM = new MlKem768();
 
 //const recipient = new MlKem768();
 //console.log(recipient);
@@ -27,10 +27,11 @@ const recip = new MlKem768();
 });
 */
 
-// Generate key pair
+// function to generate key pair
 async function genKeyPair() {
   try {
-    const [publicKey, secretKey] = await recip.generateKeyPair();
+    //generate pair
+    const [publicKey, secretKey] = await KEM.generateKeyPair();
 
     // Convert to base64 for easy transmission
     const pkBase64 = btoa(String.fromCharCode(...publicKey));
@@ -38,6 +39,8 @@ async function genKeyPair() {
 
     return {
       success: true,
+      rawPK: publicKey,
+      rawSK: secretKey,
       publicKey: pkBase64,
       secretKey: skBase64,
       publicKeyLength: publicKey.length,

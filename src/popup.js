@@ -17,6 +17,8 @@ async function getNewKeyPair() {
     if (response.success) {
       const output = `
         <strong>Key Pair Generated!</strong><br><br>
+        Raw PK: ${response.rawPK}<br>
+        Raw SK: ${response.rawSK}<br>
         Public Key Length: ${response.publicKeyLength} bytes<br>
         Secret Key Length: ${response.secretKeyLength} bytes<br><br>
         <small>Public Key (base64): ${response.publicKey.substring(
