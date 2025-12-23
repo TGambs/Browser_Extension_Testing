@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ThisIsTheTitle</title>
+    <title>Test Extension</title>
     <style>
       body {
+        background-color: #3f3f3f;
+      }
+      #allCont {
+        display: inline-block;
         background-color: red;
       }
-      #top {
-        background-color: aqua;
+      #dataCont {
+        background-color: #c1bfbf;
         width: 500px;
         height: 500px;
+        margin: 5px;
+      }
+      #navBarCont {
+        background-color: #c1bfbf;
+        width: 100px;
+        height: 500px;
+        margin: 5px;
       }
     </style>
   </head>
   <body>
-    <div id="top">
-      <h1>Hello Extensions</h1>
-      <p>This is in the top div</p>
+    <div id="allCont">
+      <div id="dataCont">
+        <h1>Hello User</h1>
+        <p>This is in the top div</p>
+      </div>
+
+      <div id="navBarCont">
+        <p>This is nav bar</p>
+      </div>
+
+      <h2>This is body section</h2>
     </div>
-    <h2>This is an extension.</h2>
+
     <script type="module" src="../build/dist/popup.bundle.js"></script>
   </body>
 </html>
