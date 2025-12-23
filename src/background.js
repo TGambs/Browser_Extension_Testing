@@ -37,6 +37,7 @@ async function genKeyPair() {
     const pkBase64 = btoa(String.fromCharCode(...publicKey));
     const skBase64 = btoa(String.fromCharCode(...secretKey));
 
+    // return all data to frontside
     return {
       success: true,
       publicKey: pkBase64,
@@ -44,6 +45,8 @@ async function genKeyPair() {
       publicKeyLength: publicKey.length,
       secretKeyLength: secretKey.length,
     };
+
+    //catch any errors and return error mssg to frontside
   } catch (error) {
     return {
       success: false,
@@ -57,10 +60,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
   if (request.action === "genKeys") {
     // Call the async function and wait for result
+    // once result is given, send it to the frontside
     genKeyPair()
       .then((result) => {
         sendResponse(result);
       })
+
+      // send any error to frontside
       .catch((error) => {
         sendResponse({
           success: false,
